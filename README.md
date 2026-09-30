@@ -21,4 +21,4 @@ An enterprise-grade club management simulation software built for an Object-Orie
 ## ⚙️ How to Run Locally
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/Abrar-Shahriar-04/gulshan-club-management.git](https://github.com/Abrar-Shahriar-04/gulshan-club-management.git)
+   git clone [https://github.com/Abrar-Shahriar-04/simulating-operations-of-gulshan-club.git](https://github.com/Abrar-Shahriar-04/simulating-operations-of-gulshan-club.git)
