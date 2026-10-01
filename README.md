@@ -13,10 +13,10 @@ An enterprise-grade club management simulation software built for an Object-Orie
 ## 👥 Group Members & Assigned Branches
 | Name / Role | Student ID | Branch | Responsibilities |
 | :--- | :--- | :--- | :--- |
-| **Md. Abrar Shahriar Rahman** *(Leader)* | 2530766 | `leader-Abrar` | Club Receptionist & Restaurent Manager |
-| *Md. Atikul Islam* | 2521757 | `member-Atikul` | Library Assistant & Security Guard |
-| *Imtiaz Uddin Howlader* | 2520903 | `member-Imtiaz` | Club President & Club Member |
-| *Anika Tabassum* | 2411839 | `member-Anika` | Kitchen Manager & HR & Payroll Officer |
+| **Md. Abrar Shahriar Rahman** *(Leader)* | 2530766 | `Abrar-2530766` | Club Receptionist & Restaurent Manager |
+| *Md. Atikul Islam* | 2521757 | `Atikul-2521757` | Library Assistant & Security Guard |
+| *Imtiaz Uddin Howlader* | 2520903 | `Imtiaz-2520903` | Club President & Club Member |
+| *Anika Tabassum* | 2411839 | `Anika-2411893` | Kitchen Manager & HR Manager |
 
 ## ⚙️ How to Run Locally
 1. Clone the repository:
