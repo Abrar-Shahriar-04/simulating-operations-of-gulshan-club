@@ -5,4 +5,6 @@ module com.example.gulshanclubmanagement {
 
     opens com.example.gulshanclubmanagement to javafx.fxml;
     exports com.example.gulshanclubmanagement;
+    opens com.example.gulshanclubmanagement.Md_Atikul_Islam_2521757 to javafx.fxml;
+
 }

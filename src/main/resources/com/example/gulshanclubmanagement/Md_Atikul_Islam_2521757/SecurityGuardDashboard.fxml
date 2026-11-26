@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="534.0" prefWidth="627.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Md_Atikul_Islam_2521757.SecurityGuardDashboardController">
+   <children>
+      <Text layoutX="117.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Security Guard Dashboard" textAlignment="CENTER" wrappingWidth="386.708984375">
+         <font>
+            <Font name="Cambria Math" size="33.0" />
+         </font>
+      </Text>
+      <Line endX="347.33331298828125" layoutX="222.0" layoutY="69.0" startX="-167.37376403808594" />
+      <Button layoutX="127.0" layoutY="109.0" mnemonicParsing="false" onAction="#LogVehicleEntryButtonOA" prefHeight="27.0" prefWidth="365.0" text="Log Vehicle Entry" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="126.0" layoutY="152.0" mnemonicParsing="false" onAction="#LogVehicleExitButtonOA" prefHeight="25.0" prefWidth="365.0" text="Log Vehicle Exit">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="124.0" layoutY="194.0" mnemonicParsing="false" onAction="#RegisterContractorEntryButtonOA" prefHeight="25.0" prefWidth="365.0" text="Register Contractor Entry">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="124.0" layoutY="239.0" mnemonicParsing="false" onAction="#LogLostAndFoundItemButtonOA" prefHeight="25.0" prefWidth="365.0" text="Log Lost and Found Item">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="124.0" layoutY="289.0" mnemonicParsing="false" onAction="#MarkLostItemAsClaimedButtonOA" prefHeight="25.0" prefWidth="365.0" text="Mark Lost Item As Claimed">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="123.0" layoutY="339.0" mnemonicParsing="false" onAction="#ReportSecurityIncidentButtonOA" prefHeight="25.0" prefWidth="365.0" text="Report Security Incident">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="124.0" layoutY="390.0" mnemonicParsing="false" onAction="#LogCCTVCameraStatusButtonOA" prefHeight="25.0" prefWidth="365.0" text="Log CCTV Camera Status">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="124.0" layoutY="441.0" mnemonicParsing="false" onAction="#CalculateParkingFeeButtonOA" prefHeight="25.0" prefWidth="365.0" text="Calculate Parking Fee">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="285.0" layoutY="487.0" mnemonicParsing="false" onAction="#SignOutButtonOA" text="Sign Out" />
+   </children>
+</AnchorPane>

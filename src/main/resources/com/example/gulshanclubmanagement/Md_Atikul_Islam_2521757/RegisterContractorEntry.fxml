@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="586.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Md_Atikul_Islam_2521757.RegisterContractorEntryController">
+   <children>
+      <Text layoutX="40.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contractor Name" />
+      <Text layoutX="60.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company" />
+      <Text layoutX="41.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Number" />
+      <Text layoutX="48.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Work Purpose" />
+      <TextField fx:id="ContractorNameTF" layoutX="144.0" layoutY="21.0" />
+      <TextField fx:id="CompanyTF" layoutX="144.0" layoutY="50.0" />
+      <TextField fx:id="ContactNumberTF" layoutX="144.0" layoutY="84.0" />
+      <TextField fx:id="WorkPurposeTF" layoutX="144.0" layoutY="117.0" />
+      <Button layoutX="167.0" layoutY="177.0" mnemonicParsing="false" onAction="#RegisterEntryButtonOA" text="Register Entry" />
+      <Button layoutX="476.0" layoutY="516.0" mnemonicParsing="false" onAction="#BackButtonOA" text="Back" />
+      <TableView fx:id="ContractorTV" layoutX="5.0" layoutY="220.0" prefHeight="277.0" prefWidth="591.0">
+        <columns>
+          <TableColumn fx:id="NameTC" prefWidth="98.66665649414062" text="Name" />
+          <TableColumn fx:id="CompanyTC" prefWidth="105.99993896484375" text="Company" />
+            <TableColumn fx:id="ContactNumberTC" prefWidth="123.3333740234375" text="Contact Number" />
+            <TableColumn fx:id="WorkPurposeTC" prefWidth="135.3333740234375" text="Work Purpose" />
+            <TableColumn fx:id="EntryTimeTC" prefWidth="128.0" text="Entry Time" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

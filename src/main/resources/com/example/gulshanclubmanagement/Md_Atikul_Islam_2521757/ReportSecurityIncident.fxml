@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="635.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Md_Atikul_Islam_2521757.ReportSecurityIncidentController">
+   <children>
+      <Text layoutX="51.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IncitentType" />
+      <ComboBox fx:id="IncidentTypeTF" layoutX="126.0" layoutY="33.0" prefWidth="150.0" />
+      <Text layoutX="347.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location" />
+      <TextField fx:id="LocationTF" layoutX="408.0" layoutY="33.0" />
+      <Text layoutX="51.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reported By" />
+      <TextField fx:id="ReportedByTF" layoutX="126.0" layoutY="77.0" />
+      <Text layoutX="317.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+      <TextArea fx:id="DescriptionTextArea" layoutX="392.0" layoutY="74.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="116.0" layoutY="174.0" mnemonicParsing="false" onAction="#SubmitReportButtonOA" text="Submit Report" />
+      <TableView fx:id="IncidentTV" layoutX="16.0" layoutY="295.0" prefHeight="247.0" prefWidth="590.0">
+         <columns>
+            <TableColumn fx:id="IncidentTypeTC" prefWidth="119.99996948242188" text="Incident Type" />
+            <TableColumn fx:id="LocationTC" prefWidth="119.3333740234375" text="Location" />
+            <TableColumn fx:id="ReportedByTC" prefWidth="119.3333740234375" text="Reported By" />
+            <TableColumn fx:id="DescriptionTC" prefWidth="232.666748046875" text="Description" />
+         </columns>
+      </TableView>
+      <Button layoutX="505.0" layoutY="582.0" mnemonicParsing="false" onAction="#BackButtonOA" text="Back" />
+   </children>
+</AnchorPane>

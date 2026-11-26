@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="498.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Md_Atikul_Islam_2521757.LogVehicleEntryController">
+   <children>
+      <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle Number" textAlignment="CENTER" wrappingWidth="113.04296875" />
+      <TextField fx:id="VehicleNumberTF" layoutX="141.0" layoutY="10.0" />
+      <Text layoutX="41.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member ID" />
+      <TextField fx:id="MemberIDTF" layoutX="141.0" layoutY="46.0" />
+      <Button layoutX="101.0" layoutY="92.0" mnemonicParsing="false" onAction="#LogEntryButtonOA" text="Log Entry" />
+      <TableView fx:id="VehicleEntryExitTV" layoutX="2.0" layoutY="150.0" prefHeight="255.0" prefWidth="593.0">
+        <columns>
+          <TableColumn fx:id="VehicleNumberTC" prefWidth="114.0" text="Vehicle Number" />
+          <TableColumn fx:id="MemberIDTC" prefWidth="102.66665649414062" text="Member ID" />
+            <TableColumn fx:id="EntryTimeTC" prefWidth="112.6666259765625" text="Entry Time" />
+            <TableColumn fx:id="ExitTimeTC" prefWidth="91.99993896484375" text="Exit Time" />
+            <TableColumn fx:id="DurationTC" prefWidth="87.99993896484375" text="Duration" />
+            <TableColumn fx:id="StatusTC" prefWidth="99.3333740234375" text="Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="479.0" layoutY="436.0" mnemonicParsing="false" onAction="#BackButtonOA" text="Back" />
+   </children>
+</AnchorPane>
