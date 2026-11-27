@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="456.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Md_Atikul_Islam_2521757.LogLostandFoundItemController">
+<AnchorPane fx:id="mainPane" prefHeight="456.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Md_Atikul_Islam_2521757.LogLostandFoundItemController">
    <children>
       <Text layoutX="76.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item" />
       <Text layoutX="42.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Finder Name" />

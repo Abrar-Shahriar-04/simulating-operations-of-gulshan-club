@@ -7,19 +7,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="529.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Md_Atikul_Islam_2521757.LogVehicleExitController">
+<AnchorPane fx:id="mainPane" prefHeight="529.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Md_Atikul_Islam_2521757.LogVehicleExitController">
    <children>
       <Text layoutX="24.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle Number" textAlignment="CENTER" wrappingWidth="113.04296875" />
       <TextField fx:id="VehicleNumberTF" layoutX="151.0" layoutY="20.0" />
       <Button layoutX="111.0" layoutY="102.0" mnemonicParsing="false" onAction="#LogExitButtonOA" text="Log Exit" />
       <TableView fx:id="VehicleEntryExitTV" layoutX="12.0" layoutY="160.0" prefHeight="258.0" prefWidth="580.0">
          <columns>
-            <TableColumn fx:id="VehicleNumberTC" prefWidth="114.0" text="Vehicle Number" />
-            <TableColumn fx:id="MemberIDTC" prefWidth="102.66665649414062" text="Member ID" />
-            <TableColumn fx:id="EntryTimeTC" prefWidth="112.6666259765625" text="Entry Time" />
-            <TableColumn fx:id="ExitTimeTC" prefWidth="91.99993896484375" text="Exit Time" />
-            <TableColumn fx:id="DurationTC" prefWidth="87.99993896484375" text="Duration" />
-            <TableColumn fx:id="StatusTC" prefWidth="69.33331298828125" text="Status" />
+            <TableColumn fx:id="VehicleNumberTC" prefWidth="143.33331298828125" text="Vehicle Number" />
+            <TableColumn fx:id="EntryTimeTC" prefWidth="148.00003051757812" text="Entry Time" />
+            <TableColumn fx:id="ExitTimeTC" prefWidth="132.00006103515625" text="Exit Time" />
+            <TableColumn fx:id="StatusTC" prefWidth="154.0" text="Status" />
          </columns>
       </TableView>
       <Button layoutX="455.0" layoutY="448.0" mnemonicParsing="false" onAction="#BackButtonOA" text="Back" />
