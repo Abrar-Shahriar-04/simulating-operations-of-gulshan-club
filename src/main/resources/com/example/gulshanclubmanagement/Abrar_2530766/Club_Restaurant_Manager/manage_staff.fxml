@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Abrar_2530766.Club_Restaurant_Manager.Controller.ManageStaffController">
+    <children>
+        <Label layoutX="25.0" layoutY="15.0" text="Add and Manage Kitchen and Floor Staff" />
+        <Label layoutX="25.0" layoutY="50.0" text="Staff ID:" />
+        <TextField fx:id="staffIdField" layoutX="115.0" layoutY="46.0" />
+        <Label layoutX="25.0" layoutY="85.0" text="Full Name:" />
+        <TextField fx:id="fullNameField" layoutX="115.0" layoutY="81.0" />
+        <Label layoutX="320.0" layoutY="50.0" text="Phone No:" />
+        <TextField fx:id="phoneField" layoutX="410.0" layoutY="46.0" />
+        <Label layoutX="320.0" layoutY="85.0" text="Role:" />
+        <ComboBox fx:id="roleComboBox" layoutX="410.0" layoutY="81.0" prefWidth="150.0" />
+        <Button layoutX="25.0" layoutY="125.0" mnemonicParsing="false" onAction="#addEmployee" text="Add Employee" />
+        <Button layoutX="140.0" layoutY="125.0" mnemonicParsing="false" onAction="#deleteEmployee" text="Delete Selected" />
+        <TableView fx:id="employeeTable" layoutX="25.0" layoutY="170.0" prefHeight="270.0" prefWidth="650.0">
+            <columns>
+                <TableColumn fx:id="colStaffId" prefWidth="130.0" text="Staff ID" />
+                <TableColumn fx:id="colFullName" prefWidth="190.0" text="Full Name" />
+                <TableColumn fx:id="colPhone" prefWidth="160.0" text="Phone Number" />
+                <TableColumn fx:id="colRole" prefWidth="170.0" text="Role" />
+            </columns>
+        </TableView>
+        <Button layoutX="25.0" layoutY="455.0" mnemonicParsing="false" onAction="#backToDashboard" text="Back" />
+    </children>
+</AnchorPane>

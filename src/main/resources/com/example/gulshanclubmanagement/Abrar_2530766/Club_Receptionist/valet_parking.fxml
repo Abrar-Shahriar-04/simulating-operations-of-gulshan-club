@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Abrar_2530766.Club_Receptionist.Controller.ValetParkingController">
+    <children>
+        <Label layoutX="25.0" layoutY="15.0" text="Valet Parking and Key Dispatch" />
+        <Label layoutX="25.0" layoutY="50.0" text="Member ID:" />
+        <TextField fx:id="memberIdField" layoutX="120.0" layoutY="46.0" />
+        <Label layoutX="25.0" layoutY="85.0" text="License Plate:" />
+        <TextField fx:id="licensePlateField" layoutX="120.0" layoutY="81.0" />
+        <Label layoutX="320.0" layoutY="50.0" text="Key Tag No:" />
+        <TextField fx:id="keyTagField" layoutX="420.0" layoutY="46.0" />
+        <Label layoutX="320.0" layoutY="85.0" text="Time In:" />
+        <TextField fx:id="timeInField" layoutX="420.0" layoutY="81.0" />
+        <Button layoutX="25.0" layoutY="125.0" mnemonicParsing="false" onAction="#registerVehicle" text="Register Car" />
+        <Button layoutX="125.0" layoutY="125.0" mnemonicParsing="false" onAction="#processKeyHandback" text="Key Handback" />
+        <TextField fx:id="searchTagField" layoutX="250.0" layoutY="125.0" prefWidth="140.0" promptText="Search Key Tag" />
+        <Button layoutX="400.0" layoutY="125.0" mnemonicParsing="false" onAction="#searchByTag" text="Search" />
+        <Button layoutX="465.0" layoutY="125.0" mnemonicParsing="false" onAction="#showAllCars" text="Show All" />
+        <TableView fx:id="valetTable" layoutX="25.0" layoutY="170.0" prefHeight="270.0" prefWidth="650.0">
+            <columns>
+                <TableColumn fx:id="colMemberId" prefWidth="110.0" text="Member ID" />
+                <TableColumn fx:id="colLicense" prefWidth="150.0" text="License Plate" />
+                <TableColumn fx:id="colTag" prefWidth="120.0" text="Key Tag No" />
+                <TableColumn fx:id="colTimeIn" prefWidth="130.0" text="Time In" />
+                <TableColumn fx:id="colStatus" prefWidth="140.0" text="Status" />
+            </columns>
+        </TableView>
+        <Button layoutX="25.0" layoutY="455.0" mnemonicParsing="false" onAction="#backToDashboard" text="Back" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Abrar_2530766.Club_Receptionist.Controller.LostPropertyController">
+    <children>
+        <Label layoutX="25.0" layoutY="15.0" text="Lost and Property Bureau" />
+        <Label layoutX="25.0" layoutY="50.0" text="Description:" />
+        <TextField fx:id="descriptionField" layoutX="120.0" layoutY="46.0" />
+        <Label layoutX="25.0" layoutY="85.0" text="Location:" />
+        <TextField fx:id="locationField" layoutX="120.0" layoutY="81.0" />
+        <Label layoutX="320.0" layoutY="50.0" text="Date:" />
+        <TextField fx:id="dateField" layoutX="420.0" layoutY="46.0" />
+        <Label layoutX="320.0" layoutY="85.0" text="Finder Name:" />
+        <TextField fx:id="finderField" layoutX="420.0" layoutY="81.0" />
+        <Button layoutX="25.0" layoutY="125.0" mnemonicParsing="false" onAction="#recordItem" text="Record Item" />
+        <Button layoutX="125.0" layoutY="125.0" mnemonicParsing="false" onAction="#markClaimed" text="Mark Claimed / Returned" />
+        <Button layoutX="285.0" layoutY="125.0" mnemonicParsing="false" onAction="#showUnclaimed" text="Unclaimed Only" />
+        <TextField fx:id="searchKeywordField" layoutX="405.0" layoutY="125.0" prefWidth="130.0" promptText="Keyword" />
+        <Button layoutX="545.0" layoutY="125.0" mnemonicParsing="false" onAction="#searchItems" text="Search" />
+        <Button layoutX="610.0" layoutY="125.0" mnemonicParsing="false" onAction="#showAllItems" text="All" />
+        <TableView fx:id="lostTable" layoutX="25.0" layoutY="170.0" prefHeight="270.0" prefWidth="650.0">
+            <columns>
+                <TableColumn fx:id="colDesc" prefWidth="170.0" text="Description" />
+                <TableColumn fx:id="colLocation" prefWidth="130.0" text="Location Found" />
+                <TableColumn fx:id="colDate" prefWidth="100.0" text="Date" />
+                <TableColumn fx:id="colFinder" prefWidth="120.0" text="Finder Name" />
+                <TableColumn fx:id="colStatus" prefWidth="130.0" text="Status" />
+            </columns>
+        </TableView>
+        <Button layoutX="25.0" layoutY="455.0" mnemonicParsing="false" onAction="#backToDashboard" text="Back" />
+    </children>
+</AnchorPane>

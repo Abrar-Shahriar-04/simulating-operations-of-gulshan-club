@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Abrar_2530766.Club_Receptionist.Controller.FacilityScheduleController">
+    <children>
+        <Label layoutX="25.0" layoutY="15.0" text="Facility Schedule and Operating Hours Board" />
+        <TableView fx:id="scheduleTable" layoutX="25.0" layoutY="55.0" prefHeight="330.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="colFacility" prefWidth="220.0" text="Facility" />
+                <TableColumn fx:id="colOpening" prefWidth="190.0" text="Opening Hours" />
+                <TableColumn fx:id="colClosing" prefWidth="190.0" text="Closing Hours" />
+            </columns>
+        </TableView>
+        <Button layoutX="25.0" layoutY="400.0" mnemonicParsing="false" onAction="#backToDashboard" text="Back" />
+    </children>
+</AnchorPane>

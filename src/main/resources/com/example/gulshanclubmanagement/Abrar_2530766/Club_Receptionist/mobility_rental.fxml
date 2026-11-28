@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Abrar_2530766.Club_Receptionist.Controller.MobilityRentalController">
+    <children>
+        <Label layoutX="25.0" layoutY="15.0" text="Wheelchair and Mobility Equipment Rental" />
+        <Label layoutX="25.0" layoutY="50.0" text="Equipment:" />
+        <ComboBox fx:id="equipmentComboBox" layoutX="120.0" layoutY="46.0" prefWidth="150.0" />
+        <Label layoutX="25.0" layoutY="85.0" text="Borrower Name:" />
+        <TextField fx:id="borrowerNameField" layoutX="120.0" layoutY="81.0" />
+        <Label layoutX="320.0" layoutY="50.0" text="Member ID:" />
+        <TextField fx:id="memberIdField" layoutX="420.0" layoutY="46.0" />
+        <Label layoutX="320.0" layoutY="85.0" text="Time Out:" />
+        <TextField fx:id="timeOutField" layoutX="420.0" layoutY="81.0" />
+        <Button layoutX="25.0" layoutY="125.0" mnemonicParsing="false" onAction="#checkoutEquipment" text="Checkout Equipment" />
+        <Button layoutX="165.0" layoutY="125.0" mnemonicParsing="false" onAction="#returnEquipment" text="Return Equipment" />
+        <TableView fx:id="rentalTable" layoutX="25.0" layoutY="170.0" prefHeight="270.0" prefWidth="650.0">
+            <columns>
+                <TableColumn fx:id="colEquipment" prefWidth="140.0" text="Equipment" />
+                <TableColumn fx:id="colBorrower" prefWidth="140.0" text="Borrower Name" />
+                <TableColumn fx:id="colMemberId" prefWidth="110.0" text="Member ID" />
+                <TableColumn fx:id="colTimeOut" prefWidth="130.0" text="Time Out" />
+                <TableColumn fx:id="colStatus" prefWidth="130.0" text="Status" />
+            </columns>
+        </TableView>
+        <Button layoutX="25.0" layoutY="455.0" mnemonicParsing="false" onAction="#backToDashboard" text="Back" />
+    </children>
+</AnchorPane>

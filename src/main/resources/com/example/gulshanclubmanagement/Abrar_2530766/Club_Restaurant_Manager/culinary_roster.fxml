@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Abrar_2530766.Club_Restaurant_Manager.Controller.CulinaryRosterController">
+    <children>
+        <Label layoutX="25.0" layoutY="15.0" text="Culinary Staff Roster and Station Assignment" />
+        <Label layoutX="25.0" layoutY="55.0" text="Staff Name:" />
+        <TextField fx:id="staffNameField" layoutX="115.0" layoutY="51.0" prefWidth="150.0" />
+        <Label layoutX="280.0" layoutY="55.0" text="Station:" />
+        <ComboBox fx:id="stationComboBox" layoutX="335.0" layoutY="51.0" prefWidth="150.0" />
+        <Label layoutX="25.0" layoutY="90.0" text="Shift:" />
+        <TextField fx:id="shiftField" layoutX="115.0" layoutY="86.0" prefWidth="150.0" />
+        <Button layoutX="280.0" layoutY="86.0" mnemonicParsing="false" onAction="#assignRoster" text="Save Roster" />
+        <TableView fx:id="rosterTable" layoutX="25.0" layoutY="135.0" prefHeight="295.0" prefWidth="630.0">
+            <columns>
+                <TableColumn fx:id="colStaffName" prefWidth="220.0" text="Staff Name" />
+                <TableColumn fx:id="colStation" prefWidth="210.0" text="Dining Station" />
+                <TableColumn fx:id="colShift" prefWidth="200.0" text="Shift Schedule" />
+            </columns>
+        </TableView>
+        <Button layoutX="25.0" layoutY="445.0" mnemonicParsing="false" onAction="#backToDashboard" text="Back" />
+    </children>
+</AnchorPane>

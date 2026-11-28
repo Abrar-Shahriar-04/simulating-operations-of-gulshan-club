@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Abrar_2530766.Club_Restaurant_Manager.Controller.RestaurantManagerDashboardController">
+    <children>
+        <Label layoutX="30.0" layoutY="20.0" text="Club Restaurant Manager Dashboard" />
+        <Button layoutX="30.0" layoutY="70.0" mnemonicParsing="false" onAction="#openTableLayout" text="Live Table Layout" />
+        <Button layoutX="250.0" layoutY="70.0" mnemonicParsing="false" onAction="#openPdrReservations" text="Private Dining Reservations" />
+        <Button layoutX="30.0" layoutY="120.0" mnemonicParsing="false" onAction="#openBanquetEvents" text="Banquet Event Coordinator" />
+        <Button layoutX="250.0" layoutY="120.0" mnemonicParsing="false" onAction="#openMenuPricing" text="Menu Pricing and Catalog" />
+        <Button layoutX="30.0" layoutY="170.0" mnemonicParsing="false" onAction="#openMenuStock" text="Daily Menu Stock Toggle" />
+        <Button layoutX="250.0" layoutY="170.0" mnemonicParsing="false" onAction="#openCulinaryRoster" text="Culinary Staff Roster" />
+        <Button layoutX="30.0" layoutY="220.0" mnemonicParsing="false" onAction="#openManageStaff" text="Add and Manage Staff" />
+        <Button layoutX="250.0" layoutY="220.0" mnemonicParsing="false" onAction="#openStaffDirectory" text="Restaurant Staff Directory" />
+        <Button layoutX="30.0" layoutY="380.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
+    </children>
+</AnchorPane>

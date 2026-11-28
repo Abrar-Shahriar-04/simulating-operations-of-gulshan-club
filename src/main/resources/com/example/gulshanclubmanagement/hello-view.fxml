@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.gulshanclubmanagement.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane prefHeight="350.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.HelloController">
+    <children>
+        <Label layoutX="130.0" layoutY="30.0" text="Gulshan Club Management System" />
+        <Label layoutX="70.0" layoutY="85.0" text="User Role:" />
+        <ComboBox fx:id="roleComboBox" layoutX="160.0" layoutY="81.0" prefWidth="200.0" />
+        <Label layoutX="70.0" layoutY="130.0" text="Username:" />
+        <TextField fx:id="usernameField" layoutX="160.0" layoutY="126.0" prefWidth="200.0" />
+        <Label layoutX="70.0" layoutY="175.0" text="Password:" />
+        <PasswordField fx:id="passwordField" layoutX="160.0" layoutY="171.0" prefWidth="200.0" />
+        <Button layoutX="160.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleLogin" prefWidth="90.0" text="Login" />
+        <Label fx:id="errorLabel" layoutX="70.0" layoutY="275.0" text="" />
+    </children>
+</AnchorPane>

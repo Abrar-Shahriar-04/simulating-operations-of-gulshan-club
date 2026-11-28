@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Abrar_2530766.Club_Restaurant_Manager.Controller.StaffDirectoryController">
+    <children>
+        <Label layoutX="25.0" layoutY="15.0" text="View and Manage Restaurant Staff Directory" />
+        <TextField fx:id="searchField" layoutX="25.0" layoutY="50.0" prefWidth="200.0" promptText="Search Name or Role" />
+        <Button layoutX="240.0" layoutY="50.0" mnemonicParsing="false" onAction="#searchStaff" text="Search" />
+        <Button layoutX="305.0" layoutY="50.0" mnemonicParsing="false" onAction="#showAllStaff" text="Show All" />
+        <Button layoutX="385.0" layoutY="50.0" mnemonicParsing="false" onAction="#removeStaff" text="Remove Staff" />
+        <TableView fx:id="directoryTable" layoutX="25.0" layoutY="95.0" prefHeight="335.0" prefWidth="650.0">
+            <columns>
+                <TableColumn fx:id="colStaffId" prefWidth="130.0" text="Staff ID" />
+                <TableColumn fx:id="colFullName" prefWidth="190.0" text="Full Name" />
+                <TableColumn fx:id="colPhone" prefWidth="160.0" text="Phone Number" />
+                <TableColumn fx:id="colRole" prefWidth="170.0" text="Role" />
+            </columns>
+        </TableView>
+        <Button layoutX="25.0" layoutY="445.0" mnemonicParsing="false" onAction="#backToDashboard" text="Back" />
+    </children>
+</AnchorPane>

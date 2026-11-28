@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Abrar_2530766.Club_Receptionist.Controller.PackageDeskController">
+    <children>
+        <Label layoutX="25.0" layoutY="15.0" text="Courier and Package Tracking Desk" />
+        <Label layoutX="25.0" layoutY="50.0" text="Member ID:" />
+        <TextField fx:id="memberIdField" layoutX="120.0" layoutY="46.0" />
+        <Label layoutX="25.0" layoutY="85.0" text="Courier:" />
+        <TextField fx:id="courierField" layoutX="120.0" layoutY="81.0" />
+        <Label layoutX="320.0" layoutY="50.0" text="Tracking No:" />
+        <TextField fx:id="trackingField" layoutX="420.0" layoutY="46.0" />
+        <Label layoutX="320.0" layoutY="85.0" text="Date:" />
+        <TextField fx:id="dateField" layoutX="420.0" layoutY="81.0" />
+        <Button layoutX="25.0" layoutY="125.0" mnemonicParsing="false" onAction="#logPackage" text="Log Package" />
+        <Button layoutX="130.0" layoutY="125.0" mnemonicParsing="false" onAction="#markPickedUp" text="Mark Picked Up" />
+        <Button layoutX="255.0" layoutY="125.0" mnemonicParsing="false" onAction="#showPendingOnly" text="Pending Packages" />
+        <TextField fx:id="searchMemberField" layoutX="390.0" layoutY="125.0" prefWidth="130.0" promptText="Search Member ID" />
+        <Button layoutX="530.0" layoutY="125.0" mnemonicParsing="false" onAction="#searchByMemberId" text="Search" />
+        <Button layoutX="595.0" layoutY="125.0" mnemonicParsing="false" onAction="#showAllPackages" text="All" />
+        <TableView fx:id="packageTable" layoutX="25.0" layoutY="170.0" prefHeight="270.0" prefWidth="650.0">
+            <columns>
+                <TableColumn fx:id="colMemberId" prefWidth="110.0" text="Member ID" />
+                <TableColumn fx:id="colCourier" prefWidth="140.0" text="Courier" />
+                <TableColumn fx:id="colTracking" prefWidth="160.0" text="Tracking No" />
+                <TableColumn fx:id="colDate" prefWidth="120.0" text="Date" />
+                <TableColumn fx:id="colStatus" prefWidth="120.0" text="Status" />
+            </columns>
+        </TableView>
+        <Button layoutX="25.0" layoutY="455.0" mnemonicParsing="false" onAction="#backToDashboard" text="Back" />
+    </children>
+</AnchorPane>
