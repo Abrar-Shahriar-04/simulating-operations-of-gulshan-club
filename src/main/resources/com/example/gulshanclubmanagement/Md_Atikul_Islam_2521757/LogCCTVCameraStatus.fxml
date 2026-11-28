@@ -8,13 +8,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="488.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Md_Atikul_Islam_2521757.LogCCTVCameraStatusController">
+<AnchorPane fx:id="mainPane" prefHeight="488.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Md_Atikul_Islam_2521757.LogCCTVCameraStatusController">
    <children>
       <Text layoutX="40.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Camera No" />
       <Text layoutX="314.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" />
       <TextField fx:id="CameraNoTF" layoutX="110.0" layoutY="18.0" />
-      <ComboBox fx:id="StatusTF" layoutX="359.0" layoutY="18.0" prefWidth="150.0" />
+      <ComboBox fx:id="StatusCB" layoutX="359.0" layoutY="18.0" prefWidth="150.0" />
       <TableView fx:id="CameraTV" layoutX="11.0" layoutY="135.0" prefHeight="200.0" prefWidth="580.0">
         <columns>
           <TableColumn fx:id="CameraNoTC" prefWidth="165.99996948242188" text="Camera No" />

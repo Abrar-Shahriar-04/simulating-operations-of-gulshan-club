@@ -17,9 +17,9 @@
       <TextField fx:id="CompanyTF" layoutX="144.0" layoutY="50.0" />
       <TextField fx:id="ContactNumberTF" layoutX="144.0" layoutY="84.0" />
       <TextField fx:id="WorkPurposeTF" layoutX="144.0" layoutY="117.0" />
-      <Button layoutX="167.0" layoutY="177.0" mnemonicParsing="false" onAction="#RegisterEntryButtonOA" text="Register Entry" />
-      <Button layoutX="476.0" layoutY="516.0" mnemonicParsing="false" onAction="#BackButtonOA" text="Back" />
-      <TableView fx:id="ContractorTV" layoutX="5.0" layoutY="220.0" prefHeight="277.0" prefWidth="591.0">
+      <Button layoutX="347.0" layoutY="75.0" mnemonicParsing="false" onAction="#RegisterEntryButtonOA" text="Register Entry" />
+      <Button layoutX="473.0" layoutY="448.0" mnemonicParsing="false" onAction="#BackButtonOA" text="Back" />
+      <TableView fx:id="ContractorTV" layoutX="4.0" layoutY="154.0" prefHeight="277.0" prefWidth="591.0">
         <columns>
           <TableColumn fx:id="NameTC" prefWidth="98.66665649414062" text="Name" />
           <TableColumn fx:id="CompanyTC" prefWidth="105.99993896484375" text="Company" />

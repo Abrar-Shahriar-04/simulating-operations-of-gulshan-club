@@ -27,7 +27,7 @@ public class SecurityGuardDashboardController
 
     @javafx.fxml.FXML
     public void SignOutButtonOA(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Md_Atikul_Islam_2521757/login-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login-view.fxml"));
         Node node=fxmlLoader.load();
         mainPane.getChildren().setAll(node);
     }

@@ -34,10 +34,10 @@ public class RegisterContractorEntryController
     private TableColumn<ContractorEntry, String> WorkPurposeTC;
     @javafx.fxml.FXML
     private TableColumn<ContractorEntry, String> NameTC;
-
-    ArrayList<ContractorEntry> a=new ArrayList<>();
     @javafx.fxml.FXML
     private AnchorPane mainPane;
+
+    ArrayList<ContractorEntry> a=new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {

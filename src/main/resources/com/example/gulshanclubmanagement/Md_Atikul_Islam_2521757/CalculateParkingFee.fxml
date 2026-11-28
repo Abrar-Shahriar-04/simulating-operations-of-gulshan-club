@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="457.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Md_Atikul_Islam_2521757.CalculateParkingFeeController">
+<AnchorPane fx:id="mainPane" prefHeight="457.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Md_Atikul_Islam_2521757.CalculateParkingFeeController">
    <children>
       <Text layoutX="53.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle No." />
       <Label fx:id="ParkingFeeTextArea" layoutX="358.0" layoutY="72.0" prefHeight="62.0" prefWidth="209.0" text="ParkingFee" />

@@ -2,7 +2,7 @@ module com.example.gulshanclubmanagement {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.graphics;
-    requires com.example.gulshanclubmanagement;
+    requires java.sql;
 
 
     opens com.example.gulshanclubmanagement to javafx.fxml;

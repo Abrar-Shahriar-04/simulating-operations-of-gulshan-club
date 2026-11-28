@@ -29,6 +29,8 @@ public class LogVehicleExitController
     @javafx.fxml.FXML
     private AnchorPane mainPane;
 
+    ArrayList<VehicleRecord> a=new ArrayList<>();
+
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -39,15 +41,18 @@ public class LogVehicleExitController
 
 
         File f=new File("VehicleRecord.bin");
+        FileInputStream fis;
+        ObjectInputStream ois=null;
         try{
-            FileInputStream fis=new FileInputStream(f);
-            ObjectInputStream ois=new ObjectInputStream(fis);
+            fis=new FileInputStream(f);
+            ois=new ObjectInputStream(fis);
             if (f.exists()){
                 VehicleRecord v;
                 while(true) {
                     try{
-                        v = (VehicleRecord)ois.readObject();
+                        v = (VehicleRecord) ois.readObject();
                         VehicleEntryExitTV.getItems().add(v);
+                        a.add(v);
                     }
                     catch(Exception e){
                         break;
@@ -57,56 +62,82 @@ public class LogVehicleExitController
         }
 
         catch (Exception e){
-            e.printStackTrace();
+            if(ois!=null) {
+                try {
+                    ois.close();
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }
         }
+
     }
 
     @javafx.fxml.FXML
     public void LogExitButtonOA(ActionEvent actionEvent) {
-        String t=VehicleNumberTF.getText();
+        if (VehicleNumberTF.getText().isEmpty()){
+            Alert a=new Alert(Alert.AlertType.ERROR);
+            a.setContentText("Please fill the required field");
+            a.showAndWait();
+            return;
+        }
+
+        for (VehicleRecord v:a){
+            if (v.getVehicleNumber().equals(VehicleNumberTF.getText()) && v.getStatus().equals("Exited")){
+                Alert a=new Alert(Alert.AlertType.ERROR);
+                a.setContentText("The Vehicle is exited");
+                a.showAndWait();
+                return;
+
+            }
+        }
+
+        boolean d=false;
+        for (VehicleRecord v:a) {
+            if (v.getVehicleNumber().equals(VehicleNumberTF.getText())){
+                d=true;
+            }
+        }
+
+        if (d==false){
+            Alert a=new Alert(Alert.AlertType.ERROR);
+            a.setContentText("The Vehicle is not found");
+            a.showAndWait();
+            return;
+        }
+
+        for (VehicleRecord m:a){
+            if (m.getVehicleNumber().equals(VehicleNumberTF.getText()) && m.getStatus().equals("Inside")){
+                m.setStatus("Exited");
+                m.setExitTime(LocalDateTime.now());
+                break;
+            }
+        }
+
         File f=new File("VehicleRecord.bin");
-        ArrayList<VehicleRecord> a=new ArrayList<>();
-        try{
-            if (f.exists()){
-                FileInputStream fis=new FileInputStream(f);
-                ObjectInputStream ois=new ObjectInputStream(fis);
-                while(true) {
-                    try{
-                        VehicleRecord v = (VehicleRecord)ois.readObject();
-                        if (v.getVehicleNumber().equals(t) && v.getStatus().equals("Inside")){
-                            v.setExitTime(LocalDateTime.now());
-                            v.setStatus("Exited");
-                            VehicleEntryExitTV.getItems().clear();
-                        }
-                        a.add(v);
-                    }
+        FileOutputStream fos;
+        ObjectOutputStream oos=null;
+        try {
+            if (f.exists()) {
+                fos = new FileOutputStream(f, false);
+                oos = new ObjectOutputStream(fos);
+            }
+            VehicleEntryExitTV.getItems().clear();
+            for (VehicleRecord n:a){
+                oos.writeObject(n);
+                VehicleEntryExitTV.getItems().add(n);
+            } oos.close();
 
-                    catch(Exception e){
-                        break;
-                    }
-                }
-                for (VehicleRecord b:a) {
-                    VehicleEntryExitTV.getItems().add(b);
+        } catch (Exception e) {
+            if(oos!=null) {
+                try {
+                    oos.close();
+                } catch (Exception e2) {
+                    e2.printStackTrace();
                 }
             }
         }
-        catch (Exception e){
-            e.printStackTrace();
-        }
 
-        try{
-            File l=new File("VehicleRecord.bin");
-            FileOutputStream fos=new FileOutputStream(l, false);
-            ObjectOutputStream oos=new ObjectOutputStream(fos);
-            for(VehicleRecord v:a){
-                oos.writeObject(a);
-            }
-            oos.close();
-        }
-
-        catch (Exception e){
-            e.printStackTrace();
-        }
     }
 
     @javafx.fxml.FXML

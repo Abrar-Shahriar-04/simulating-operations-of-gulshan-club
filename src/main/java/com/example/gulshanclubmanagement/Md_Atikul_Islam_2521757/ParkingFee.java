@@ -4,15 +4,11 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 public class ParkingFee implements Serializable {
-    private final int hourlyRate;
+    private static final int hourlyRate=30;
     private String vehicleNumber;
-    private int hours;
-    private float amount;
+    private float hours;
+    private float parkingFee ;
     private LocalDate date;
-
-    public int getHourlyRate() {
-        return hourlyRate;
-    }
 
     public String getVehicleNumber() {
         return vehicleNumber;
@@ -22,20 +18,20 @@ public class ParkingFee implements Serializable {
         this.vehicleNumber = vehicleNumber;
     }
 
-    public int getHours() {
+    public float getHours() {
         return hours;
     }
 
-    public void setHours(int hours) {
+    public void setHours(float hours) {
         this.hours = hours;
     }
 
-    public float getAmount() {
-        return amount;
+    public float getParkingFee() {
+        return parkingFee;
     }
 
-    public void setAmount(float amount) {
-        this.amount = amount;
+    public void setParkingFee(float parkingFee) {
+        this.parkingFee = parkingFee;
     }
 
     public LocalDate getDate() {
@@ -46,21 +42,11 @@ public class ParkingFee implements Serializable {
         this.date = date;
     }
 
-    public ParkingFee(String vehicleNumber, int hours, float amount, LocalDate date) {
-        this.hourlyRate = 30;
+    public ParkingFee(String vehicleNumber, float hours, float parkingFee, LocalDate date) {
         this.vehicleNumber = vehicleNumber;
         this.hours = hours;
-        this.amount = amount;
+        this.parkingFee = parkingFee;
         this.date = date;
     }
-
-    public void calculateFee(){
-        return;
-    }
-
-
-
-
-
 
 }

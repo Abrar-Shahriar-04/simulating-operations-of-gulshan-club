@@ -10,6 +10,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 public class LogVehicleEntryController
 {
@@ -27,6 +28,8 @@ public class LogVehicleEntryController
     private TableColumn<VehicleRecord, String> VehicleNumberTC;
     @javafx.fxml.FXML
     private AnchorPane mainPane;
+
+    ArrayList<VehicleRecord> a=new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -46,8 +49,9 @@ public class LogVehicleEntryController
                 VehicleRecord v;
                 while(true) {
                     try{
-                        v = (VehicleRecord)ois.readObject();
+                        v = (VehicleRecord) ois.readObject();
                         VehicleEntryExitTV.getItems().add(v);
+                        a.add(v);
                     }
                     catch(Exception e){
                         break;
@@ -82,34 +86,61 @@ public class LogVehicleEntryController
             a.showAndWait();
             return;
         }
-        else  {
-            VehicleRecord v = new VehicleRecord(VehicleNumberTF.getText(), LocalDateTime.now(), null, "Inside");
-            File f = new File("VehicleRecord.bin");
-            FileOutputStream fos;
-            ObjectOutputStream oos=null;
-            try {
-                if (f.exists()) {
-                    fos = new FileOutputStream(f, true);
-                    oos = new AppendableObjectOutputStream(fos);
-                } else {
-                    fos = new FileOutputStream(f);
-                    oos = new ObjectOutputStream(fos);
-                }
-                oos.writeObject(v);
-                oos.close();
-                VehicleEntryExitTV.getItems().add(v);
 
-            } catch (Exception e) {
-                if(oos!=null) {
-                    try {
-                        oos.close();
-                    } catch (Exception e2) {
-                        e2.printStackTrace();
-                    }
-                }
+        for (VehicleRecord v:a){
+            if (v.getVehicleNumber().equals(VehicleNumberTF.getText()) && v.getStatus().equals("Inside")){
+                Alert a=new Alert(Alert.AlertType.ERROR);
+                a.setContentText("Vehicle is already inside");
+                a.showAndWait();
+                return;
             }
         }
 
+        int count=0;
+        for (VehicleRecord v:a){
+            if (v.getStatus().equals("Inside")){
+                count+=1;
+            }
+        }
+
+        if (count > 50){
+            Alert a=new Alert(Alert.AlertType.ERROR);
+            a.setContentText("Parking lot is full");
+            a.showAndWait();
+            return;
+        }
+
+
+        VehicleRecord c = new VehicleRecord(VehicleNumberTF.getText(), LocalDateTime.now(), null, "Inside");
+
+        File f=new File("VehicleRecord.bin");
+        FileOutputStream fos;
+        ObjectOutputStream oos=null;
+        try {
+            if (f.exists()) {
+                fos = new FileOutputStream(f, true);
+                oos = new AppendableObjectOutputStream(fos);
+            } else {
+                fos = new FileOutputStream(f);
+                oos = new ObjectOutputStream(fos);
+            }
+            oos.writeObject(c);
+            oos.close();
+            a.add(c);
+            VehicleEntryExitTV.getItems().clear();
+            for (VehicleRecord n:a){
+                VehicleEntryExitTV.getItems().add(n);
+            }
+
+        } catch (Exception e) {
+            if(oos!=null) {
+                try {
+                    oos.close();
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }
+        }
 
     }
 
