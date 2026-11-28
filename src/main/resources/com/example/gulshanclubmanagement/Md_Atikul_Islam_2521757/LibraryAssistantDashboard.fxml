@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainPane" prefHeight="533.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gulshanclubmanagement.Md_Atikul_Islam_2521757.LibraryAssistantDashboardController">
+   <children>
+      <Text layoutX="94.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Library Assistant Dashboard">
+         <font>
+            <Font name="Cambria Math" size="33.0" />
+         </font>
+      </Text>
+      <Line endX="249.33331298828125" endY="-3.814697265625E-6" layoutX="300.0" layoutY="60.0" startX="-257.3333435058594" startY="-3.814697265625E-6" />
+      <Button layoutX="134.0" layoutY="80.0" mnemonicParsing="false" onAction="#AddNewBookButtonOA" prefHeight="25.0" prefWidth="345.0" text="Add New Book" textAlignment="CENTER" />
+      <Button layoutX="135.0" layoutY="124.0" mnemonicParsing="false" onAction="#SearchInventoryButtonOA" prefHeight="25.0" prefWidth="345.0" text="Search Inventory" textAlignment="CENTER" />
+      <Button layoutX="135.0" layoutY="162.0" mnemonicParsing="false" onAction="#IssueBookButtonOA" prefHeight="25.0" prefWidth="345.0" text="Issue Book" textAlignment="CENTER" />
+      <Button layoutX="135.0" layoutY="207.0" mnemonicParsing="false" onAction="#ProcessBookReturnButtonOA" prefHeight="25.0" prefWidth="345.0" text="Process Book Return" textAlignment="CENTER" />
+      <Button layoutX="136.0" layoutY="247.0" mnemonicParsing="false" onAction="#RenewIssuedBookButtonOA" prefHeight="25.0" prefWidth="345.0" text="Renew Issued Book" textAlignment="CENTER" />
+      <Button layoutX="136.0" layoutY="288.0" mnemonicParsing="false" onAction="#RemoveDamagedBookButtonOA" prefHeight="25.0" prefWidth="345.0" text="Remove Damaged Book" textAlignment="CENTER" />
+      <Button layoutX="137.0" layoutY="325.0" mnemonicParsing="false" onAction="#TrackBookDonationEntryButtonOA" prefHeight="25.0" prefWidth="345.0" text="Track Book Donation Entry" textAlignment="CENTER" />
+      <Button layoutX="138.0" layoutY="367.0" mnemonicParsing="false" onAction="#UpdateBookCategoryTagOA" prefHeight="25.0" prefWidth="345.0" text="Update Book Category Tag" textAlignment="CENTER" />
+      <Button layoutX="274.0" layoutY="429.0" mnemonicParsing="false" onAction="#SignOutButtonOA" text="Sign Out" textAlignment="CENTER" />
+   </children>
+</AnchorPane>
